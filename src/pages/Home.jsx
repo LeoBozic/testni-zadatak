@@ -19,16 +19,26 @@ function Home() {
   return (
     <div>
       <div>Home</div>
-      <div>
-        {data.map((car) => {
-          return (
-            <div>
-              <div>Marka: {car.VehicleMake}</div>
-              <div>Model: {car.VehicleModel}</div>
-            </div>
-          );
-        })}
-      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>Make</th>
+            <th>Model</th>
+            <th>Year</th>
+          </tr>
+        </thead>
+        <tbody>
+          {data.map((car, key) => {
+            return (
+              <tr key={key}>
+                <th>{car.VehicleMake}</th>
+                <th>{car.VehicleModel}</th>
+                <th>{car.VehicleYear}</th>
+              </tr>
+            );
+          })}
+        </tbody>
+      </table>
     </div>
   );
 }
