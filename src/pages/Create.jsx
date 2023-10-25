@@ -13,6 +13,7 @@ function Create() {
       VehicleMake: make,
       VehicleModel: model,
       VehicleYear: year,
+      time: new Date(),
     });
   };
 
