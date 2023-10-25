@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { db } from "../firebase";
 import { collection, getDocs, deleteDoc, doc } from "firebase/firestore";
+import { Link } from "react-router-dom";
 
 function Home() {
   const [data, setData] = useState([]);
@@ -23,7 +24,6 @@ function Home() {
 
   return (
     <div>
-      <div>Home</div>
       <table>
         <thead>
           <tr>
@@ -41,6 +41,9 @@ function Home() {
                 <th>{car.VehicleYear}</th>
                 <th>
                   <button onClick={() => deleteVehicle(car.id)}>Delete</button>
+                  <Link to="/edit" state={{ car: car }}>
+                    Edit
+                  </Link>
                 </th>
               </tr>
             );

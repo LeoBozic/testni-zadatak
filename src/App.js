@@ -8,7 +8,6 @@ function App() {
       <nav>
         <Link to="/">Home</Link>
         <Link to="/create">Create</Link>
-        <Link to="/edit">Edit</Link>
       </nav>
       <Routes>
         <Route path="/" Component={Home} />
