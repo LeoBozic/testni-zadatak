@@ -37,7 +37,7 @@ function Home() {
   }, [sorting, order]);
 
   return (
-    <div>
+    <div className="home-page">
       <table>
         <thead>
           <tr>
@@ -70,8 +70,17 @@ function Home() {
                 <th>{car.VehicleModel}</th>
                 <th>{car.VehicleYear}</th>
                 <th>
-                  <button onClick={() => deleteVehicle(car.id)}>Delete</button>
-                  <Link to="/edit" state={{ car: car }}>
+                  <button
+                    className="button"
+                    onClick={() => deleteVehicle(car.id)}
+                  >
+                    Delete
+                  </button>
+                  <Link
+                    className="button button-link"
+                    to="/edit"
+                    state={{ car: car }}
+                  >
                     Edit
                   </Link>
                 </th>

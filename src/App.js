@@ -5,9 +5,13 @@ import "./App.css";
 function App() {
   return (
     <div className="App">
-      <nav>
-        <Link to="/">Home</Link>
-        <Link to="/create">Create</Link>
+      <nav className="App-header">
+        <Link to="/" className="header-link">
+          Home
+        </Link>
+        <Link to="/create" className="header-link">
+          Create
+        </Link>
       </nav>
       <Routes>
         <Route path="/" Component={Home} />

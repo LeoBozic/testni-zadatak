@@ -50,7 +50,9 @@ function Create() {
         value={year}
         onChange={(e) => setYear(e.target.value)}
       />
-      <button type="submit">Add Vehicle</button>
+      <button className="button" type="submit">
+        Add Vehicle
+      </button>
     </form>
   );
 }
